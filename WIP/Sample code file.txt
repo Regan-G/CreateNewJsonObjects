@@ -1,0 +1,9 @@
+//{ListEntry}
+<JsonProperty("{VariableName}")>
+Dim {VariableName} As {VariableType}
+Public Sub set{VariableName}(ByVal data As {VariableType})
+{VariableName} = data
+End Sub
+Public Function get{VariableName}() As {VariableType}
+Return {VariableName}
+End Function

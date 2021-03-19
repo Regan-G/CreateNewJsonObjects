@@ -75,5 +75,58 @@ namespace CreateNewJsonFile
 			}
 			return text;
 		}
+
+		private void richTextBox1_MouseUp(object sender, MouseEventArgs e)
+		{
+			
+		}
+
+		private void listBox1_MouseUp(object sender, MouseEventArgs e)
+		{
+			try
+			{
+				if (listBox1.Items.Count > 0)
+				{
+					String[] items = listBox1.SelectedItem.ToString().Split(':');
+					if (items.Length > 1)
+					{
+						textBox2.Text = items.ElementAt(0);
+						textBox3.Text = items.ElementAt(1);
+					}
+				}
+			}
+			catch (Exception ex) { MessageBox.Show(ex.Message); }
+		}
+
+		private ListBox updateListBox(ListBox listB, int index, string text)
+		{
+			try
+			{
+				listBox1.Items.RemoveAt(index);
+				listBox1.Items.Insert(index, text);
+			}
+			catch(Exception ex) { MessageBox.Show(ex.Message); }
+			return listB;
+		}
+
+		private void textBox2_KeyUp(object sender, KeyEventArgs e)
+		{
+			if (e.KeyCode == Keys.Return)
+			{
+				listBox1 = updateListBox(listBox1, listBox1.SelectedIndex, textBox2.Text + ":" + textBox3.Text);
+				//listBox1.Items.RemoveAt(listBox1.SelectedIndex);
+				//listBox1.Items.Insert(listBox1.SelectedIndex, textBox2.Text + ":" + textBox3.Text);
+			}
+		}
+
+		private void textBox3_KeyUp(object sender, KeyEventArgs e)
+		{
+			if (e.KeyCode == Keys.Return)
+			{
+				listBox1 = updateListBox(listBox1, listBox1.SelectedIndex, textBox2.Text + ":" + textBox3.Text);
+				//listBox1.Items.RemoveAt(listBox1.SelectedIndex);
+				//listBox1.Items.Insert(listBox1.SelectedIndex, textBox2.Text + ":" + textBox3.Text);
+			}
+		}
 	}
 }

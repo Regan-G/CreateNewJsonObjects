@@ -61,6 +61,7 @@
 			this.listBox1.Name = "listBox1";
 			this.listBox1.Size = new System.Drawing.Size(203, 173);
 			this.listBox1.TabIndex = 1;
+			this.listBox1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.listBox1_MouseUp);
 			// 
 			// label1
 			// 
@@ -87,6 +88,7 @@
 			this.richTextBox1.Size = new System.Drawing.Size(203, 173);
 			this.richTextBox1.TabIndex = 4;
 			this.richTextBox1.Text = "";
+			this.richTextBox1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.richTextBox1_MouseUp);
 			// 
 			// label2
 			// 
@@ -154,6 +156,7 @@
 			this.textBox2.Name = "textBox2";
 			this.textBox2.Size = new System.Drawing.Size(136, 20);
 			this.textBox2.TabIndex = 12;
+			this.textBox2.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textBox2_KeyUp);
 			// 
 			// textBox3
 			// 
@@ -161,6 +164,7 @@
 			this.textBox3.Name = "textBox3";
 			this.textBox3.Size = new System.Drawing.Size(136, 20);
 			this.textBox3.TabIndex = 13;
+			this.textBox3.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textBox3_KeyUp);
 			// 
 			// Form1
 			// 
