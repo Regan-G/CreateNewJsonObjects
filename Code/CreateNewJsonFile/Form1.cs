@@ -182,5 +182,31 @@ namespace CreateNewJsonFile
 				richTextBox2.Text = richTextBox2.Text  + replaceTextInFile(text, descriptor, varName, varType) + "\r\n" + "\r\n";
 			}			
 		}
+
+		private void button4_Click(object sender, EventArgs e)
+		{
+			String path = Directory.GetCurrentDirectory();
+			String text = richTextBox2.Text;
+			if (!exportFile(path, text))
+				MessageBox.Show("Epic fail");
+		}
+
+		private Boolean exportFile(String path, String text)
+		{
+			Boolean success = false;
+			try
+			{
+				SaveFileDialog saveFileDialog1 = new SaveFileDialog();
+				saveFileDialog1.Filter = "CNJF create new json file|*.txt";
+				saveFileDialog1.Title = "Save code file";
+				saveFileDialog1.InitialDirectory = path;
+				saveFileDialog1.ShowDialog();
+				if (saveFileDialog1.FileName != "")
+					File.AppendAllText(saveFileDialog1.FileName, text + Environment.NewLine);
+				success = true;
+			}
+			catch (Exception ex) { MessageBox.Show(ex.Message); }
+			return success;
+		}
 	}
 }
