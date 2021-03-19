@@ -1,0 +1,8 @@
+{
+"Description": "string",
+"Make": "string",
+"Model": "string",
+"Year": "string",
+"Bought": "2018-10-19T08:19:43.173Z",
+"Odometer": 0
+}
