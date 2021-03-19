@@ -128,5 +128,31 @@ namespace CreateNewJsonFile
 				//listBox1.Items.Insert(listBox1.SelectedIndex, textBox2.Text + ":" + textBox3.Text);
 			}
 		}
+
+		private void button3_Click(object sender, EventArgs e)
+		{
+			String path = Directory.GetCurrentDirectory();
+			String text = readInCodeFile(path);
+			richTextBox1.Text = text;
+		}
+
+		private String readInCodeFile(String path)
+		{
+			String text = null;
+			try
+			{
+				OpenFileDialog openFileDialog = new OpenFileDialog();
+				openFileDialog.Filter = "CNJF create new json file|*.txt";
+				openFileDialog.Title = "Open code sample file";
+				openFileDialog.InitialDirectory = path;
+				openFileDialog.ShowDialog();
+				if (openFileDialog.FileName != "")
+				{
+					text = File.ReadAllText(openFileDialog.FileName);
+				}
+			}
+			catch (Exception ex) { MessageBox.Show(ex.Message); }
+			return text;
+		}
 	}
 }
