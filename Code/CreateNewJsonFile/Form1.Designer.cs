@@ -91,7 +91,6 @@
 			this.richTextBox1.Size = new System.Drawing.Size(351, 173);
 			this.richTextBox1.TabIndex = 4;
 			this.richTextBox1.Text = "";
-			this.richTextBox1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.richTextBox1_MouseUp);
 			// 
 			// label2
 			// 
@@ -109,6 +108,9 @@
 			this.comboBox1.Name = "comboBox1";
 			this.comboBox1.Size = new System.Drawing.Size(351, 21);
 			this.comboBox1.TabIndex = 6;
+			this.comboBox1.DropDown += new System.EventHandler(this.comboBox1_DropDown);
+			this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+			this.comboBox1.KeyUp += new System.Windows.Forms.KeyEventHandler(this.comboBox1_KeyUp);
 			// 
 			// richTextBox2
 			// 

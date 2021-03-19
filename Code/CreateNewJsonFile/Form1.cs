@@ -14,6 +14,7 @@ namespace CreateNewJsonFile
 	public partial class Form1 : Form
 	{
 		List<string> list = new List<string>();
+		List<string> languageList = new List<string>();
 		String Descriptor = "{ListEntry}";
 		String VariableName = "{VariableName}";
 		String VariableType = "{VariableType}";
@@ -77,11 +78,6 @@ namespace CreateNewJsonFile
 				text = File.ReadAllLines(openFileDialog.FileName);
 			}
 			return text;
-		}
-
-		private void richTextBox1_MouseUp(object sender, MouseEventArgs e)
-		{
-			
 		}
 
 		private void listBox1_MouseUp(object sender, MouseEventArgs e)
@@ -207,6 +203,52 @@ namespace CreateNewJsonFile
 			}
 			catch (Exception ex) { MessageBox.Show(ex.Message); }
 			return success;
+		}
+
+		private void comboBox1_KeyUp(object sender, KeyEventArgs e)
+		{
+			if (e.KeyCode == Keys.Return)
+			{
+				if (richTextBox1.TextLength > 0)
+				{
+					languageList.Add(comboBox1.Text + "|" + richTextBox1.Text);
+				}
+			}
+			
+		}
+
+		private void comboBox1_DropDown(object sender, EventArgs e)
+		{
+			if (languageList != null)
+			{
+				if (languageList.Count > 0)
+				{
+					comboBox1.Items.Clear();
+					foreach (string item in languageList)
+					{
+						string[] entries = item.Split('|');
+						comboBox1.Items.Add(entries.ElementAt(0));
+					}						
+				}
+			}
+		}
+
+		private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+		{
+			if (comboBox1.Text.Length > 0)
+			{
+				foreach (string item in languageList)
+				{
+					string[] entries = item.Split('|');
+					string testComboBox = comboBox1.Text;
+					string testLanguageList = entries.ElementAt(0);
+					if (testComboBox.Equals(testLanguageList))
+					{
+						richTextBox1.Text = entries.ElementAt(1);
+						break;
+					}
+				}
+			}
 		}
 	}
 }
