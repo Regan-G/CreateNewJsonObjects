@@ -14,6 +14,9 @@ namespace CreateNewJsonFile
 	public partial class Form1 : Form
 	{
 		List<string> list = new List<string>();
+		String Descriptor = "{ListEntry}";
+		String VariableName = "{VariableName}";
+		String VariableType = "{VariableType}";
 		public Form1()
 		{
 			InitializeComponent();
@@ -48,9 +51,9 @@ namespace CreateNewJsonFile
 
 				foreach (string line in items)
 				{
-					entry = line.Split(delimiter);					
+					entry = line.Split(delimiter);
 					if (entry.Length > 1)
-						list.Add(entry.ElementAt(0) + ":" + entry.ElementAt(1));					
+						list.Add(entry.ElementAt(0).Trim('"') + ":" + entry.ElementAt(1).Trim(' ').Trim('"'));
 				}
 				returnData = list.ToArray();
 			}
@@ -71,7 +74,7 @@ namespace CreateNewJsonFile
 			String[] text = null;
 			if (openFileDialog.FileName != "")
 			{
-				text = File.ReadAllLines(openFileDialog.FileName);				
+				text = File.ReadAllLines(openFileDialog.FileName);
 			}
 			return text;
 		}
@@ -104,6 +107,8 @@ namespace CreateNewJsonFile
 			{
 				listBox1.Items.RemoveAt(index);
 				listBox1.Items.Insert(index, text);
+				list.RemoveAt(index);
+				list.Insert(index, textBox2.Text + ":" + textBox3.Text);
 			}
 			catch(Exception ex) { MessageBox.Show(ex.Message); }
 			return listB;
@@ -112,21 +117,14 @@ namespace CreateNewJsonFile
 		private void textBox2_KeyUp(object sender, KeyEventArgs e)
 		{
 			if (e.KeyCode == Keys.Return)
-			{
-				listBox1 = updateListBox(listBox1, listBox1.SelectedIndex, textBox2.Text + ":" + textBox3.Text);
-				//listBox1.Items.RemoveAt(listBox1.SelectedIndex);
-				//listBox1.Items.Insert(listBox1.SelectedIndex, textBox2.Text + ":" + textBox3.Text);
-			}
+				listBox1 = updateListBox(listBox1, listBox1.SelectedIndex, textBox2.Text + ":" + textBox3.Text);				
+				
 		}
 
 		private void textBox3_KeyUp(object sender, KeyEventArgs e)
 		{
 			if (e.KeyCode == Keys.Return)
-			{
 				listBox1 = updateListBox(listBox1, listBox1.SelectedIndex, textBox2.Text + ":" + textBox3.Text);
-				//listBox1.Items.RemoveAt(listBox1.SelectedIndex);
-				//listBox1.Items.Insert(listBox1.SelectedIndex, textBox2.Text + ":" + textBox3.Text);
-			}
 		}
 
 		private void button3_Click(object sender, EventArgs e)
@@ -148,11 +146,41 @@ namespace CreateNewJsonFile
 				openFileDialog.ShowDialog();
 				if (openFileDialog.FileName != "")
 				{
-					text = File.ReadAllText(openFileDialog.FileName);
+					text = File.ReadAllText(openFileDialog.FileName).Trim('"');
 				}
 			}
 			catch (Exception ex) { MessageBox.Show(ex.Message); }
 			return text;
+		}
+
+		private String replaceTextInFile(String text, String descriptor, String varName, String varType)
+		{
+			String test = null;
+			try
+			{
+				test = text.Replace(Descriptor, descriptor);
+				test = test.Replace(VariableName, varName);
+				test = test.Replace(VariableType, varType);
+			}
+			catch(Exception ex) { MessageBox.Show(ex.Message); }
+			return test.Trim('"');
+		}
+
+		private void button2_Click(object sender, EventArgs e)
+		{
+			String text = richTextBox1.Text;
+			String descriptor = null;
+			String varName = null;
+			String varType = null;
+			String[] entries = null;
+			foreach (string item in list)
+			{
+				entries = item.Split(':');
+				descriptor = item;
+				varName = entries.ElementAt(0);
+				varType = entries.ElementAt(1);
+				richTextBox2.Text = richTextBox2.Text  + replaceTextInFile(text, descriptor, varName, varType) + "\r\n" + "\r\n";
+			}			
 		}
 	}
 }

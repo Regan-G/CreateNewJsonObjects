@@ -81,6 +81,7 @@
 			this.button2.TabIndex = 3;
 			this.button2.Text = "Translate";
 			this.button2.UseVisualStyleBackColor = true;
+			this.button2.Click += new System.EventHandler(this.button2_Click);
 			// 
 			// richTextBox1
 			// 
@@ -110,9 +111,11 @@
 			// 
 			// richTextBox2
 			// 
-			this.richTextBox2.Location = new System.Drawing.Point(387, 78);
+			this.richTextBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+			this.richTextBox2.Location = new System.Drawing.Point(387, 12);
 			this.richTextBox2.Name = "richTextBox2";
-			this.richTextBox2.Size = new System.Drawing.Size(397, 441);
+			this.richTextBox2.Size = new System.Drawing.Size(397, 507);
 			this.richTextBox2.TabIndex = 7;
 			this.richTextBox2.Text = "";
 			// 
