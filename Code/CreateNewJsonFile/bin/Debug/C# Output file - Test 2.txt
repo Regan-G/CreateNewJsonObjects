@@ -1,0 +1,100 @@
+//AssetId:int
+Public int AssetId { get; set; }
+
+//AssetTypeId:int
+Public int AssetTypeId { get; set; }
+
+//Description:string
+Public string Description { get; set; }
+
+//IsConnectedTrailer:boolean
+Public boolean IsConnectedTrailer { get; set; }
+
+//RegistrationNumber:string
+Public string RegistrationNumber { get; set; }
+
+//SiteId:int
+Public int SiteId { get; set; }
+
+//FuelType:string
+Public string FuelType { get; set; }
+
+//TargetFuelConsumption:long
+Public long TargetFuelConsumption { get; set; }
+
+//TargetFuelConsumptionUnits:string
+Public string TargetFuelConsumptionUnits { get; set; }
+
+//TargetHourlyFuelConsumption:long
+Public long TargetHourlyFuelConsumption { get; set; }
+
+//TargetHourlyFuelConsumptionUnits:string
+Public string TargetHourlyFuelConsumptionUnits { get; set; }
+
+//FleetNumber:string
+Public string FleetNumber { get; set; }
+
+//Make:string
+Public string Make { get; set; }
+
+//Model:string
+Public string Model { get; set; }
+
+//Year:string
+Public string Year { get; set; }
+
+//VinNumber:string
+Public string VinNumber { get; set; }
+
+//EngineNumber:string
+Public string EngineNumber { get; set; }
+
+//DefaultDriverId:long
+Public long DefaultDriverId { get; set; }
+
+//FmVehicleId:single
+Public single FmVehicleId { get; set; }
+
+//AdditionalMobileDevice:string
+Public string AdditionalMobileDevice { get; set; }
+
+//Notes:string
+Public string Notes { get; set; }
+
+//Icon:string
+Public string Icon { get; set; }
+
+//IconColour:string
+Public string IconColour { get; set; }
+
+//Colour:string
+Public string Colour { get; set; }
+
+//AssetImage:string
+Public string AssetImage { get; set; }
+
+//IsDefaultImage:true
+Public true IsDefaultImage { get; set; }
+
+//AssetImageUrl:string
+Public string AssetImageUrl { get; set; }
+
+//UserState:string
+Public string UserState { get; set; }
+
+//CreatedBy:string
+Public string CreatedBy { get; set; }
+
+//CreatedDate:TimeSpan
+Public TimeSpan CreatedDate { get; set; }
+
+//Odometer:long
+Public long Odometer { get; set; }
+
+//EngineHours:string
+Public string EngineHours { get; set; }
+
+//Country:string
+Public string Country { get; set; }
+
+

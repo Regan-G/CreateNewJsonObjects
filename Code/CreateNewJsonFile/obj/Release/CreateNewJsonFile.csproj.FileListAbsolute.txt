@@ -1,0 +1,9 @@
+F:\GitHub\CreateNewJsonObjects\Code\CreateNewJsonFile\bin\Release\CreateNewJsonFile.exe.config
+F:\GitHub\CreateNewJsonObjects\Code\CreateNewJsonFile\bin\Release\CreateNewJsonFile.exe
+F:\GitHub\CreateNewJsonObjects\Code\CreateNewJsonFile\bin\Release\CreateNewJsonFile.pdb
+F:\GitHub\CreateNewJsonObjects\Code\CreateNewJsonFile\obj\Release\CreateNewJsonFile.Form1.resources
+F:\GitHub\CreateNewJsonObjects\Code\CreateNewJsonFile\obj\Release\CreateNewJsonFile.Properties.Resources.resources
+F:\GitHub\CreateNewJsonObjects\Code\CreateNewJsonFile\obj\Release\CreateNewJsonFile.csproj.GenerateResource.cache
+F:\GitHub\CreateNewJsonObjects\Code\CreateNewJsonFile\obj\Release\CreateNewJsonFile.csproj.CoreCompileInputs.cache
+F:\GitHub\CreateNewJsonObjects\Code\CreateNewJsonFile\obj\Release\CreateNewJsonFile.exe
+F:\GitHub\CreateNewJsonObjects\Code\CreateNewJsonFile\obj\Release\CreateNewJsonFile.pdb

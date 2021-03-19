@@ -61,7 +61,7 @@
 			this.listBox1.FormattingEnabled = true;
 			this.listBox1.Location = new System.Drawing.Point(12, 78);
 			this.listBox1.Name = "listBox1";
-			this.listBox1.Size = new System.Drawing.Size(220, 173);
+			this.listBox1.Size = new System.Drawing.Size(220, 394);
 			this.listBox1.TabIndex = 1;
 			this.listBox1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.listBox1_MouseUp);
 			// 
@@ -76,7 +76,7 @@
 			// 
 			// button2
 			// 
-			this.button2.Location = new System.Drawing.Point(265, 309);
+			this.button2.Location = new System.Drawing.Point(288, 507);
 			this.button2.Name = "button2";
 			this.button2.Size = new System.Drawing.Size(75, 23);
 			this.button2.TabIndex = 3;
@@ -86,7 +86,7 @@
 			// 
 			// richTextBox1
 			// 
-			this.richTextBox1.Location = new System.Drawing.Point(12, 346);
+			this.richTextBox1.Location = new System.Drawing.Point(12, 540);
 			this.richTextBox1.Name = "richTextBox1";
 			this.richTextBox1.Size = new System.Drawing.Size(351, 173);
 			this.richTextBox1.TabIndex = 4;
@@ -95,7 +95,7 @@
 			// label2
 			// 
 			this.label2.AutoSize = true;
-			this.label2.Location = new System.Drawing.Point(14, 314);
+			this.label2.Location = new System.Drawing.Point(14, 512);
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(137, 13);
 			this.label2.TabIndex = 5;
@@ -104,7 +104,7 @@
 			// comboBox1
 			// 
 			this.comboBox1.FormattingEnabled = true;
-			this.comboBox1.Location = new System.Drawing.Point(12, 271);
+			this.comboBox1.Location = new System.Drawing.Point(12, 480);
 			this.comboBox1.Name = "comboBox1";
 			this.comboBox1.Size = new System.Drawing.Size(351, 21);
 			this.comboBox1.TabIndex = 6;
@@ -118,7 +118,7 @@
             | System.Windows.Forms.AnchorStyles.Left)));
 			this.richTextBox2.Location = new System.Drawing.Point(387, 12);
 			this.richTextBox2.Name = "richTextBox2";
-			this.richTextBox2.Size = new System.Drawing.Size(397, 507);
+			this.richTextBox2.Size = new System.Drawing.Size(397, 701);
 			this.richTextBox2.TabIndex = 7;
 			this.richTextBox2.Text = "";
 			// 
@@ -175,7 +175,7 @@
 			// 
 			// button3
 			// 
-			this.button3.Location = new System.Drawing.Point(157, 309);
+			this.button3.Location = new System.Drawing.Point(171, 507);
 			this.button3.Name = "button3";
 			this.button3.Size = new System.Drawing.Size(75, 23);
 			this.button3.TabIndex = 14;
@@ -197,7 +197,7 @@
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(796, 531);
+			this.ClientSize = new System.Drawing.Size(796, 725);
 			this.Controls.Add(this.button4);
 			this.Controls.Add(this.button3);
 			this.Controls.Add(this.textBox3);
@@ -216,7 +216,7 @@
 			this.Controls.Add(this.button1);
 			this.Name = "Form1";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-			this.Text = "Form1";
+			this.Text = "Create json files from input data";
 			this.ResumeLayout(false);
 			this.PerformLayout();
 

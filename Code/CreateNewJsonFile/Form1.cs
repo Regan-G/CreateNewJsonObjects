@@ -13,12 +13,15 @@ namespace CreateNewJsonFile
 {
 	public partial class Form1 : Form
 	{
+		#region Global Variables
 		List<string> list = new List<string>();
 		List<string> languageList = new List<string>();
 		List<string> fileList = new List<string>();
 		String Descriptor = "{ListEntry}";
 		String VariableName = "{VariableName}";
 		String VariableType = "{VariableType}";
+		#endregion
+
 		public Form1()
 		{
 			InitializeComponent();
@@ -63,8 +66,6 @@ namespace CreateNewJsonFile
 			try
 			{
 				String[] entry = null;
-				//String[] variables = null;
-
 				foreach (string line in items)
 				{
 					entry = line.Split(delimiter);
@@ -88,11 +89,21 @@ namespace CreateNewJsonFile
 			openFileDialog.InitialDirectory = path;
 			openFileDialog.ShowDialog();
 			String[] text = null;
+			String[] trimmedText = null;
+			String test = null;
+			int index = 0;
 			if (openFileDialog.FileName != "")
 			{
 				text = File.ReadAllLines(openFileDialog.FileName);
+				trimmedText = new String[text.Length];
+				foreach (string line in text)
+				{
+					test = line.Trim(' ');
+					trimmedText.SetValue(test, index);
+					index++;
+				}				
 			}
-			return text;
+			return trimmedText;
 		}
 
 		private void listBox1_MouseUp(object sender, MouseEventArgs e)
@@ -129,7 +140,6 @@ namespace CreateNewJsonFile
 		{
 			if (e.KeyCode == Keys.Return)
 				listBox1 = updateListBox(listBox1, listBox1.SelectedIndex, textBox2.Text + ":" + textBox3.Text);				
-				
 		}
 
 		private void textBox3_KeyUp(object sender, KeyEventArgs e)
@@ -229,8 +239,7 @@ namespace CreateNewJsonFile
 				{
 					languageList.Add(comboBox1.Text + "|" + richTextBox1.Text);
 				}
-			}
-			
+			}			
 		}
 
 		private void comboBox1_DropDown(object sender, EventArgs e)
