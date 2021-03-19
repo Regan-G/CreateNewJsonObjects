@@ -1,0 +1,61 @@
+'Description:string
+<JsonProperty("Description")>
+Dim Description As string
+Public Sub setDescription(ByVal data As string)
+Description = data
+End Sub
+Public Function getDescription() As string
+Return Description
+End Function
+
+'Make:string
+<JsonProperty("Make")>
+Dim Make As string
+Public Sub setMake(ByVal data As string)
+Make = data
+End Sub
+Public Function getMake() As string
+Return Make
+End Function
+
+'Model:string
+<JsonProperty("Model")>
+Dim Model As string
+Public Sub setModel(ByVal data As string)
+Model = data
+End Sub
+Public Function getModel() As string
+Return Model
+End Function
+
+'Year:string
+<JsonProperty("Year")>
+Dim Year As string
+Public Sub setYear(ByVal data As string)
+Year = data
+End Sub
+Public Function getYear() As string
+Return Year
+End Function
+
+'Bought:TimeSpan
+<JsonProperty("Bought")>
+Dim Bought As TimeSpan
+Public Sub setBought(ByVal data As TimeSpan)
+Bought = data
+End Sub
+Public Function getBought() As TimeSpan
+Return Bought
+End Function
+
+'Odometer:Single
+<JsonProperty("Odometer")>
+Dim Odometer As Single
+Public Sub setOdometer(ByVal data As Single)
+Odometer = data
+End Sub
+Public Function getOdometer() As Single
+Return Odometer
+End Function
+
+

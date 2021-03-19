@@ -15,12 +15,29 @@ namespace CreateNewJsonFile
 	{
 		List<string> list = new List<string>();
 		List<string> languageList = new List<string>();
+		List<string> fileList = new List<string>();
 		String Descriptor = "{ListEntry}";
 		String VariableName = "{VariableName}";
 		String VariableType = "{VariableType}";
 		public Form1()
 		{
 			InitializeComponent();
+			readInSampleCodeFiles();
+		}
+
+		private void readInSampleCodeFiles()
+		{
+			String path = Directory.GetCurrentDirectory();
+			if (File.Exists(path + "\\SampleCode.txt"))
+			{
+				String[] text = File.ReadAllLines(path + "\\SampleCode.txt");
+				foreach (string line in text)
+					fileList.Add(line.Substring(0, line.Length-4));
+				foreach (string entry in fileList){
+					String codeEntry = File.ReadAllText(path + "\\" + entry + ".txt");
+						languageList.Add(entry + "|" + codeEntry);
+				}				
+			}
 		}
 
 		private void button1_Click(object sender, EventArgs e)
@@ -36,10 +53,8 @@ namespace CreateNewJsonFile
 					listBox1.Items.Clear();
 					foreach (string line in returnData)
 						listBox1.Items.Add(line);
-				}
-				
-			}
-			
+				}				
+			}			
 		}
 
 		private string[] splitFile(String[] items, char[] delimiter)
@@ -169,6 +184,7 @@ namespace CreateNewJsonFile
 			String varName = null;
 			String varType = null;
 			String[] entries = null;
+			richTextBox2.Text = null;
 			foreach (string item in list)
 			{
 				entries = item.Split(':');

@@ -1,0 +1,2 @@
+//{ListEntry}
+Public {VariableType} {VariableName} { get; set; }

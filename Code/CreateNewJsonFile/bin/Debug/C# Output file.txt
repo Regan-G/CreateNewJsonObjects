@@ -1,0 +1,19 @@
+//Description:string
+Public string Description { get; set; }
+
+//Make:string
+Public string Make { get; set; }
+
+//Model:string
+Public string Model { get; set; }
+
+//Year:string
+Public string Year { get; set; }
+
+//Bought:TimeSpan
+Public TimeSpan Bought { get; set; }
+
+//Odometer:Single
+Public Single Odometer { get; set; }
+
+
