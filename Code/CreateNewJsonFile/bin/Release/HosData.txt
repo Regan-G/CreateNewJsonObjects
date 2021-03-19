@@ -1,0 +1,21 @@
+"RuleSetName": "string",
+  "CurrentStatus": 0,
+  "CurrentStatusDescription": "string",
+  "CurrentStatusStartDateTime": "2021-03-19T08:19:43.605Z",
+  "IsOnDuty": true,
+  "LastCalculation": "2021-03-19T08:19:43.605Z",
+  "AvailableTimes": [
+    {
+      "RuleId": 0,
+      "AvailableTimeType": 0,
+      "Name": "string",
+      "FullAvailableTime": "string",
+      "CurrentAvailableTime": "string",
+      "HasSplitValue": true,
+      "SplitValue": "string",
+      "OverrideDescription": "string",
+      "DateTimeValue": "2021-03-19T08:19:43.605Z",
+      "IsDateTimeValue": true
+    }
+  ]
+}
