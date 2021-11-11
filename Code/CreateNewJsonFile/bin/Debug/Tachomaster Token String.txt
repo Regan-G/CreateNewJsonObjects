@@ -1,0 +1,5 @@
+{
+	"Token":"238398285",
+	"Authenticated":true,
+	"LastAuth":"2021-08-05T10:32:33.00111Z"
+}

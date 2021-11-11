@@ -1,0 +1,3 @@
+Description:String
+VehicleIds:Integer
+AssetIds:Long

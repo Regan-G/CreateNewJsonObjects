@@ -1,0 +1,12 @@
+  {
+    "DriverId": 0,
+    "OverallScore": 0,
+    "Duration": 0,
+    "Distance": 0,
+    "OverSpeedingScore": 0,
+    "HarshBrakingScore": 0,
+    "HarshAccelerationScore": 0,
+    "OverRevvingScore": 0,
+    "OutOfGreenBandDrivingScore": 0,
+    "ExcessiveIdlingScore": 0
+  }

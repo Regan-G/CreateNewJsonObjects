@@ -1,0 +1,12 @@
+"AssetId": 0,
+    "SiteId": 0,
+    "Description": "string",
+    "RegistrationNumber": "string",
+    "TrailerId": 0,
+    "HexTrailerId": "string",
+    "TrailerIdDate": "2021-08-11T10:14:04.184Z",
+    "SetOdometer": 0,
+    "SetOdometerDate": "2021-08-11T10:14:04.184Z",
+    "LastAssetId": 0,
+    "ConnectDate": "2021-08-11T10:14:04.184Z",
+    "DisconnectDate": "2021-08-11T10:14:04.184Z"

@@ -1,0 +1,6 @@
+{
+"CompCode": "XYZ",
+"ReadTime":"2021-01-11 14:50:00",
+"Reference":"Test-image upload",
+"TachoImg":""
+}

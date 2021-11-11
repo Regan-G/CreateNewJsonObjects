@@ -1,0 +1,2 @@
+"Classification": MiX.Integrate.Shared.Entities.Trips.TripClassification,
+      "Comment": "string"

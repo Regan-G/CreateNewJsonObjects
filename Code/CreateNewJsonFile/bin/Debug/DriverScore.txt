@@ -1,0 +1,10 @@
+    "DriverId": Long,
+    "OverallScore": Decimal,
+    "Duration": Integer,
+    "Distance": Decimal,
+    "OverSpeedingScore": Decimal,
+    "HarshBrakingScore": Decimal,
+    "HarshAccelerationScore": Decimal,
+    "OverRevvingScore": Decimal,
+    "OutOfGreenBandDrivingScore": Decimal,
+    "ExcessiveIdlingScore": Decimal

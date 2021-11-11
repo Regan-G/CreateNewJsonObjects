@@ -45,6 +45,7 @@ namespace CreateNewJsonFile
 
 		private void button1_Click(object sender, EventArgs e)
 		{
+			//listBox1.Items.Clear();
 			String path  = Directory.GetCurrentDirectory();
 			String[] items = importFile(path);
 			if (items != null)
@@ -66,6 +67,8 @@ namespace CreateNewJsonFile
 			try
 			{
 				String[] entry = null;
+				list = null;
+				list = new List<string>();
 				foreach (string line in items)
 				{
 					entry = line.Split(delimiter);
